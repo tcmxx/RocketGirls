@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1592527884699308}
+  m_IsPrefabAsset: 1
+--- !u!1 &1592527884699308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4997808645276832}
+  - component: {fileID: 114330372525434712}
+  - component: {fileID: 114987644396858354}
+  m_Layer: 0
+  m_Name: ObjectSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4997808645276832
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592527884699308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6303461, y: 3.8200731, z: -0.11032927}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114330372525434712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592527884699308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c60b4913b9ae884f979a5b7de5c1b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minInterval: 5
+  maxInterval: 10
+  repeating: 1
+  maxCount: 0
+  initialDelay: 5
+  counting: 1
+  onTime:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114987644396858354}
+        m_MethodName: SpawnObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114987644396858354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592527884699308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e01495dfc9642c42ae060a3f64d35dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parenting: 0
+  relativeSpawnRange: {x: 5.2, y: 0, z: 0}
+  objectsToSpawn:
+  - objPreb: {fileID: 1738954913134244, guid: d3a06115009f22b449db105161481595, type: 2}
+    weight: 0.7
+    customInitializeParameter: 0
+    customInitalizeMethod: 
+  - objPreb: {fileID: 1170397611757866, guid: 45badab097b25d44c9c25c696863fb52, type: 2}
+    weight: 0.3
+    customInitializeParameter: 0
+    customInitalizeMethod: 
