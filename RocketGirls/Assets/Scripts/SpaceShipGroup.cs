@@ -62,14 +62,23 @@ public class SpaceShipGroup : MonoBehaviour {
         {
             var p = r.transform.localPosition;
             p.y = shipVerticalFactor * r.currentResource;
-            r.transform.localPosition = p;
+            r.transform.localPosition = Vector3.Lerp(r.transform.localPosition,p,Time.deltaTime*5f);
         }
 
     }
 
-    public void OnRocketDie(Rocket rocket)
+    public void OnRocketDie(Rocket rocket, bool gameFail)
     {
-
+        if (gameFail)
+        {
+            GameUI.Instance.ShowGameFail();
+            enabled = false;
+        }
+        else
+        {
+            AllRocket.Remove(rocket);
+        }
     }
+    
 
 }

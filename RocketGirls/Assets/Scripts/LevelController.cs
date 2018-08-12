@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelController : MonoBehaviour {
 
@@ -9,7 +11,7 @@ public class LevelController : MonoBehaviour {
     public GameObject[] levelSpawners;
     public SpriteFadeout[] levelBackgrounds;
     public int currentLevel = 0;
-
+    public LevelNextEvent onNextLevel;
     private void Awake()
     {
         Instance = this;
@@ -30,6 +32,8 @@ public class LevelController : MonoBehaviour {
         {
             currentLevel++;
             SetLevel(currentLevel);
+
+            onNextLevel.Invoke(currentLevel);
         }
     }
 
@@ -46,3 +50,6 @@ public class LevelController : MonoBehaviour {
         }
     }
 }
+
+[Serializable]
+public class LevelNextEvent : UnityEvent<int> { }

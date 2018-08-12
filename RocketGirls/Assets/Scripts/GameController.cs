@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public float[] levelTheshoulds;
 
     public GameStatus gameStatus = GameStatus.Running;
+    public string endGameCutSceneName;
     public enum GameStatus
     {
         Cutscene,
@@ -30,6 +31,11 @@ public class GameController : MonoBehaviour
     {
         traveledDistance += SpaceShipGroup.Instance.forwardSpeed * Time.deltaTime;
         CheckLevelChange();
+        if(traveledDistance >= maxDistance)
+        {
+            TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(endGameCutSceneName);
+            enabled = false;
+        }
     }
 
     protected void CheckLevelChange()

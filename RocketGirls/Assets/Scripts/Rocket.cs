@@ -51,7 +51,30 @@ public class Rocket : MonoBehaviour {
 
     protected void Die()
     {
-        Group.OnRocketDie(this);
+        Group.OnRocketDie(this,true);
+        status = RocketStatus.Dead;
+        StartCoroutine(DieAnimation());
+    }
+
+    public void DieWithoutLoss()
+    {
+        Group.OnRocketDie(this, false);
+        status = RocketStatus.Dead;
+        StartCoroutine(DieAnimation());
+    }
+
+
+    IEnumerator DieAnimation()
+    {
+        transform.SetParent(null);
+        float t = 0;
+        while(t < 5)
+        {
+            yield return new WaitForEndOfFrame();
+            t += Time.deltaTime;
+            transform.Rotate(Vector3.forward, 360 * Time.deltaTime);
+            transform.Translate(Vector3.down * 0.75f * Time.deltaTime,Space.World);
+        }
     }
 
     public void TakeDamage(float damage, bool showAnimation = true)

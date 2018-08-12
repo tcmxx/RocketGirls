@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1536
   events:
   - eventType: 0
     unityEvent:

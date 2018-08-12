@@ -277,6 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c282849d68b6eab4e8f30ea864c87c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSceneName: GameScene
+  menuSceneName: MenuScene
   progressBarRef: {fileID: 114591765822400922}
 --- !u!114 &114761322932160632
 MonoBehaviour:
@@ -517,6 +519,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27.100006, y: 11.799988}
+  m_AnchoredPosition: {x: -27.100037, y: 11.799927}
   m_SizeDelta: {x: 54.2, y: -64.2}
   m_Pivot: {x: 0.5, y: 0.5}
