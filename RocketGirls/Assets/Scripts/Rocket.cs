@@ -66,6 +66,7 @@ public class Rocket : MonoBehaviour {
 
     IEnumerator DieAnimation()
     {
+        transform.GetComponent<Collider2D>().enabled = false;
         transform.SetParent(null);
         float t = 0;
         while(t < 5)

@@ -6,8 +6,14 @@ public class MenuUILogic : MonoBehaviour {
     public string startSceneName;
 
     protected bool started = false;
-	// Use this for initialization
-	void Start () {
+    protected Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,7 +22,16 @@ public class MenuUILogic : MonoBehaviour {
         if (!started && Input.GetButtonDown("Submit"))
         {
             started = true;
-            TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(startSceneName);
+            StartCoroutine(StartGameCoroutine());
+            
         }
 	}
+
+
+    IEnumerator StartGameCoroutine()
+    {
+        animator.SetTrigger("Start");
+        yield return new WaitForSeconds(2.5f);
+        TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(startSceneName);
+    }
 }
