@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
         CheckLevelChange();
         if(traveledDistance >= maxDistance)
         {
+
             StartCoroutine(EndGame());
             enabled = false;
         }
@@ -40,7 +41,13 @@ public class GameController : MonoBehaviour
 
     protected IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(3);
+        foreach (var r in SpaceShipGroup.Instance.AllRocket)
+        {
+            r.Stop();
+        }
+        LevelController.Instance.Stop();
+        SpaceShipGroup.Instance.enabled = false;
+        yield return new WaitForSeconds(5);
         TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(endGameCutSceneName);
     }
 

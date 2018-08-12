@@ -79,6 +79,10 @@ public class SpaceShipGroup : MonoBehaviour {
             AllRocket.Remove(rocket);
         }
     }
-    
+
+    private void OnDisable()
+    {
+        rBody.velocity = Vector3.zero;
+    }
 
 }

@@ -772,7 +772,7 @@ MonoBehaviour:
   - {fileID: 114504431453551214}
   - {fileID: 114291020116566626}
   - {fileID: 114321849032360852}
-  cost: 20
+  cost: 10
   playKeysMaxInterval: 0.7
   maxTotalTime: 1000
   onSuccess:
@@ -793,7 +793,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   currentToPlayIndex: 0
   keyTimerCountingDown: 0
-  destroyTimeAfterDone: 10
+  destroyTimeAfterDone: 13
 --- !u!114 &114941254340617200
 MonoBehaviour:
   m_ObjectHideFlags: 1

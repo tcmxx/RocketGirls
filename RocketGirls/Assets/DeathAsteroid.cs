@@ -14,7 +14,7 @@ public class DeathAsteroid : MonoBehaviour {
 
     private void Awake()
     {
-        mainRenderer = GetComponent<SpriteRenderer>();
+        mainRenderer = GetComponentInChildren<SpriteRenderer>();
     }
     // Use this for initialization
     void Start () {

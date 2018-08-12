@@ -44,6 +44,8 @@ namespace TCUtils
             }
             else if (Instance != this)
             {
+                Instance.maskFadeInTime = maskFadeInTime;
+                Instance.maskFadeOutTime = maskFadeOutTime;
                 //Debug.Log("There is more than one SceneTransitionHelper. Destroyed the new one.");
                 Destroy(gameObject);
             }

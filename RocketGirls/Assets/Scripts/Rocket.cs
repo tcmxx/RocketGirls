@@ -66,6 +66,8 @@ public class Rocket : MonoBehaviour {
 
     IEnumerator DieAnimation()
     {
+        if (abilityInstance != null)
+            Destroy(abilityInstance.gameObject);
         transform.GetComponent<Collider2D>().enabled = false;
         transform.SetParent(null);
         float t = 0;
@@ -74,8 +76,10 @@ public class Rocket : MonoBehaviour {
             yield return new WaitForEndOfFrame();
             t += Time.deltaTime;
             transform.Rotate(Vector3.forward, 360 * Time.deltaTime);
-            transform.Translate(Vector3.down * 0.75f * Time.deltaTime,Space.World);
+            transform.Translate(Vector3.down * 1f * Time.deltaTime,Space.World);
         }
+
+        Destroy(gameObject);
     }
 
     public void TakeDamage(float damage, bool showAnimation = true)
@@ -85,6 +89,13 @@ public class Rocket : MonoBehaviour {
             currentResource -= damage;
             currentResource = Mathf.Clamp(currentResource, 0, maxResource);
         }
+    }
+
+    public void Stop()
+    {
+        if (abilityInstance != null)
+            Destroy(abilityInstance.gameObject);
+        status = RocketStatus.Disabled;
     }
 
     public void GetResource(float resource)

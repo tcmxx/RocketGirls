@@ -39,6 +39,11 @@ public class LevelController : MonoBehaviour {
         }
     }
 
+    public void Stop()
+    {
+        levelSpawners[currentLevel].SetActive(false);
+    }
+
     public void SetLevel(int level)
     {
         currentLevel = level;

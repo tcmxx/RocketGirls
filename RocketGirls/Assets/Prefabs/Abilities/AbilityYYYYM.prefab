@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4429136339700846}
   - component: {fileID: 114850788030691414}
   - component: {fileID: 95555375049677034}
-  - component: {fileID: 114450703111943014}
+  - component: {fileID: 114743257348294572}
   m_Layer: 0
   m_Name: AbilityYYYYM
   m_TagString: Untagged
@@ -839,19 +839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 109
---- !u!114 &114450703111943014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1065357845850086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4600b95f4a8939c4ea599a0086c54992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fillupCount: 3
-  filupAmount: 40
 --- !u!114 &114504431453551214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -876,6 +863,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 121
+--- !u!114 &114743257348294572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065357845850086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e01495dfc9642c42ae060a3f64d35dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parenting: 0
+  relativeSpawnRange: {x: 0, y: 0, z: 0}
+  objectsToSpawn:
+  - objPreb: {fileID: 1470667885317936, guid: 6dd1611d9f9596d43bd3ddfc455cfa2e, type: 2}
+    weight: 1
+    customInitializeParameter: 0
+    customInitalizeMethod: 
+  useAbsolutePosition: 1
+  absolutePosition: {x: -0.3882592, y: 2.356909, z: 0}
 --- !u!114 &114850788030691414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -893,14 +900,14 @@ MonoBehaviour:
   - {fileID: 114291020116566626}
   - {fileID: 114076884690175154}
   - {fileID: 114321849032360852}
-  cost: 20
+  cost: 30
   playKeysMaxInterval: 0.7
   maxTotalTime: 1000
   onSuccess:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114450703111943014}
-        m_MethodName: Fillup
+      - m_Target: {fileID: 114743257348294572}
+        m_MethodName: SpawnObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

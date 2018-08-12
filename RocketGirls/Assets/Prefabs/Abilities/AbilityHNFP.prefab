@@ -759,7 +759,7 @@ MonoBehaviour:
   - {fileID: 114504431453551214}
   - {fileID: 114291020116566626}
   - {fileID: 114321849032360852}
-  cost: 30
+  cost: 60
   playKeysMaxInterval: 0.7
   maxTotalTime: 1000
   onSuccess:

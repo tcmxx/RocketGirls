@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285878913553073419f3c2d5bafe1b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  factorMultiplier: 0.5
+  factorMultiplier: 0.3
   activeTime: 10
 --- !u!114 &114291020116566626
 MonoBehaviour:
@@ -443,7 +443,7 @@ MonoBehaviour:
   keysToPlay:
   - {fileID: 114291020116566626}
   - {fileID: 114321849032360852}
-  cost: 20
+  cost: 30
   playKeysMaxInterval: 0.7
   maxTotalTime: 1000
   onSuccess:
