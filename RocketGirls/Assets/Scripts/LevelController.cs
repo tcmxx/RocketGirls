@@ -12,9 +12,11 @@ public class LevelController : MonoBehaviour {
     public SpriteFadeout[] levelBackgrounds;
     public int currentLevel = 0;
     public LevelNextEvent onNextLevel;
+    public MovingBackground currentMovingBackground;
     private void Awake()
     {
         Instance = this;
+        currentMovingBackground = levelBackgrounds[0].GetComponent<MovingBackground>();
     }
     // Use this for initialization
     void Start () {
@@ -47,7 +49,11 @@ public class LevelController : MonoBehaviour {
         for (int i = 0; i < levelBackgrounds.Length; ++i)
         {
             levelBackgrounds[i].target = (i == level)?1:0;
+            if(i == level)
+                levelBackgrounds[i].gameObject.SetActive(true);
         }
+
+        currentMovingBackground = levelBackgrounds[level].GetComponent<MovingBackground>();
     }
 }
 

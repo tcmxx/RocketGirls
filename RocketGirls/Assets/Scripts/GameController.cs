@@ -33,13 +33,25 @@ public class GameController : MonoBehaviour
         CheckLevelChange();
         if(traveledDistance >= maxDistance)
         {
-            TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(endGameCutSceneName);
+            StartCoroutine(EndGame());
             enabled = false;
         }
     }
 
+    protected IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(3);
+        TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(endGameCutSceneName);
+    }
+
     protected void CheckLevelChange()
     {
+        float prevThr = LevelController.Instance.currentLevel == 0 ? 0 : levelTheshoulds[LevelController.Instance.currentLevel-1]* maxDistance;
+        float nextThr = LevelController.Instance.currentLevel == levelTheshoulds.Length ? maxDistance : levelTheshoulds[LevelController.Instance.currentLevel]* maxDistance;
+        float range = nextThr - prevThr;
+        float backgroundRatio = (traveledDistance - prevThr) / range;
+        LevelController.Instance.currentMovingBackground.currentRatio = backgroundRatio;
+
         if (LevelController.Instance.currentLevel >= levelTheshoulds.Length)
             return;
         float currentRatio = Mathf.Clamp01(traveledDistance / maxDistance);
