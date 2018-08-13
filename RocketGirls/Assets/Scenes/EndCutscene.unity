@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTextObject: {fileID: 349779564}
   punchObject: {fileID: 322993126}
-  writingSpeed: 60
+  writingSpeed: 10
   punctuationPause: 0.25
   hiddenTextColor: {r: 1, g: 1, b: 1, a: 0}
   writeWholeWords: 0
@@ -906,10 +906,11 @@ GameObject:
   - component: {fileID: 514617274}
   - component: {fileID: 514617273}
   - component: {fileID: 514617272}
-  - component: {fileID: 514617276}
   - component: {fileID: 514617278}
   - component: {fileID: 514617277}
   - component: {fileID: 514617279}
+  - component: {fileID: 514617280}
+  - component: {fileID: 514617281}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -956,8 +957,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 514617272}
   commandList:
-  - {fileID: 514617276}
   - {fileID: 514617278}
+  - {fileID: 514617281}
+  - {fileID: 514617280}
   - {fileID: 514617279}
   - {fileID: 514617277}
 --- !u!114 &514617274
@@ -987,7 +989,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 514617273}
   selectedCommands:
-  - {fileID: 514617279}
+  - {fileID: 514617278}
   variables: []
   description: 
   stepPause: 0
@@ -1013,23 +1015,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &514617276
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 514617271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc625e237d6048bf86f34835d8266d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1
-  indentLevel: 0
-  _languageCode:
-    stringRef: {fileID: 0}
-    stringVal: 
-  languageCodeOLD: 
 --- !u!114 &514617277
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1107,7 +1092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: 'Rocket girls overcame all the challenges for now. '
+  storyText: Rocket girls overcame all the challenges for now.
   description: 
   character: {fileID: 367929103}
   portrait: {fileID: 21300000, guid: 5c22432406d92934188fd15387f83784, type: 3}
@@ -1133,7 +1118,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: But, what is coming next?
+  storyText: But, what is waiting for them next?
+  description: 
+  character: {fileID: 367929103}
+  portrait: {fileID: 21300000, guid: 5c22432406d92934188fd15387f83784, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 264394559}
+--- !u!114 &514617280
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514617271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: They are still young.
+  description: 
+  character: {fileID: 367929103}
+  portrait: {fileID: 21300000, guid: 5c22432406d92934188fd15387f83784, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 264394559}
+--- !u!114 &514617281
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514617271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: They are still pretty.
   description: 
   character: {fileID: 367929103}
   portrait: {fileID: 21300000, guid: 5c22432406d92934188fd15387f83784, type: 3}
@@ -1156,6 +1193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525288177}
   - component: {fileID: 525288176}
+  - component: {fileID: 525288178}
   m_Layer: 0
   m_Name: Localization
   m_TagString: Untagged
@@ -1176,7 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeLanguage: 
-  localizationFile: {fileID: 0}
+  localizationFile: {fileID: 4900000, guid: 1277dc521301ae94b9134baa30f8ff96, type: 3}
 --- !u!4 &525288177
 Transform:
   m_ObjectHideFlags: 0
@@ -1191,6 +1229,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525288178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525288175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537d619e1c1749240a7134073a6a1f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &554240720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,7 +1640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -312, y: -24}
+  m_AnchoredPosition: {x: -312, y: -23.99997}
   m_SizeDelta: {x: -670.8, y: -353.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828046189
@@ -1743,6 +1792,130 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8b3c25dafd7ec4787bb5c8838e0279, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1046638866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046638868}
+  - component: {fileID: 1046638867}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1046638867
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046638866}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c17b1b8f7291af24b81671fbc9df7a59, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1046638868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046638866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.720048, y: 5.442547, z: -0.065113634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126287331
 GameObject:
   m_ObjectHideFlags: 0

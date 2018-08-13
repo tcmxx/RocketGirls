@@ -26,16 +26,16 @@ public class GameUI : MonoBehaviour {
         progressBarRef.value = Mathf.Clamp01(GameController.Instance.traveledDistance / GameController.Instance.maxDistance);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TwoOptionPanel.Instance.StartOptionPanel("Restart", () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(gameSceneName); },
-                "Quit", () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(menuSceneName); }, null
+            TwoOptionPanel.Instance.StartOptionPanel(LocalizationText.GetText("Restart"), () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(gameSceneName); },
+                LocalizationText.GetText("Quit"), () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(menuSceneName); }, null
             );
         }
     }
 
     public void ShowGameFail(float delay = 2.34f)
     {
-        StartCoroutine(DelayedCall(() => TwoOptionPanel.Instance.StartOptionPanel("Restart", () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(gameSceneName); },
-                "Quit", () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(menuSceneName); }, "Your rocket girls fell"
+        StartCoroutine(DelayedCall(() => TwoOptionPanel.Instance.StartOptionPanel(LocalizationText.GetText("Restart"), () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(gameSceneName); },
+                LocalizationText.GetText("Quit"), () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(menuSceneName); }, LocalizationText.GetText("Your rocket girls fell at :") + ((int)GameController.Instance.traveledDistance) + "/" + ((int)GameController.Instance.maxDistance)
             ), delay));
 
     }

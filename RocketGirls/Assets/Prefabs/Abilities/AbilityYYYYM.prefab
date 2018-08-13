@@ -901,7 +901,7 @@ MonoBehaviour:
   - {fileID: 114076884690175154}
   - {fileID: 114321849032360852}
   cost: 30
-  playKeysMaxInterval: 0.7
+  playKeysMaxInterval: 0.9
   maxTotalTime: 1000
   onSuccess:
     m_PersistentCalls:

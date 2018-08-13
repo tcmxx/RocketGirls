@@ -21,7 +21,7 @@ public class Ability : MonoBehaviour {
 
     protected bool done = false;
     public float destroyTimeAfterDone;
-
+    public bool initializeOnStart = true;
     protected Animator animator;
 
     public Rocket ParentPlayer { get; set; }
@@ -32,7 +32,12 @@ public class Ability : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        InitializeKeys(); ;
+        done = true;
+        if (initializeOnStart)
+        {
+            
+            InitializeKeys(); 
+        }
 
     }
 	
@@ -55,6 +60,11 @@ public class Ability : MonoBehaviour {
             if(totalTimer >= maxTotalTime && !done)
             {
                 AbilityFailed();
+            }
+
+            if(ParentPlayer != null)
+            {
+                transform.position = ParentPlayer.transform.position;
             }
         }
 
@@ -97,8 +107,9 @@ public class Ability : MonoBehaviour {
         return currentToPlayIndex >= keysToPlay.Length;
     }
 
-    protected void InitializeKeys()
+    public void InitializeKeys()
     {
+        done = false;
         currentToPlayIndex = 0;
         foreach (var k in keysToPlay)
         {
@@ -116,7 +127,8 @@ public class Ability : MonoBehaviour {
     protected void AbilitySucceed()
     {
         done = true;
-        ParentPlayer.TakeDamage(cost,false);
+        if(ParentPlayer)
+            ParentPlayer.TakeDamage(cost,false);
         onSuccess.Invoke();
         Debug.Log("Ability " + gameObject.name + " succeed~");
         animator.SetTrigger("Succeed");
