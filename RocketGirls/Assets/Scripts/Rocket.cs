@@ -109,15 +109,27 @@ public class Rocket : MonoBehaviour {
 
     protected void CheckWhetherShowAbility()
     {
-        if(Mathf.Clamp01(currentResource / maxResource) >= showAbilityThreshold && abilityInstance == null)
+        if(Mathf.Clamp01(currentResource / maxResource) >= showAbilityThreshold)
         {
-            abilityInstance = Instantiate(specialAbilityPref, transform.position, Quaternion.identity,transform.parent);
-            abilityInstance.GetComponent<Ability>().ParentPlayer = this;
+            ShowAbility();
         }
-        else if(Mathf.Clamp01(currentResource / maxResource) < showAbilityThreshold && abilityInstance != null)
+        /*else if(Mathf.Clamp01(currentResource / maxResource) < showAbilityThreshold && abilityInstance != null)
         {
             abilityInstance.AbilityFailed();
             abilityInstance = null;
+        }*/
+    }
+
+    public void ShowAbility()
+    {
+        if(abilityInstance == null || abilityInstance.Done && specialAbilityPref.cost < currentResource)
+        {
+            abilityInstance = Instantiate(specialAbilityPref, transform.position, Quaternion.identity, transform.parent);
+            abilityInstance.GetComponent<Ability>().ParentPlayer = this;
+        }
+        else
+        {
+            abilityInstance.ResetTimer();
         }
     }
 

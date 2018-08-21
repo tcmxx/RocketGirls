@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e610c4e2cf2c0d24e9dc37d146d3040d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeDelay: 8
+  timeDelay: 7
 --- !u!114 &114458656581571714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d97bb5f65f7ea48bd50daf53c6f7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoverRate: 3
+  recoverRate: 2
 --- !u!212 &212951382869960968
 SpriteRenderer:
   m_ObjectHideFlags: 1

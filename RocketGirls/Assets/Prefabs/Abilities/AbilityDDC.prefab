@@ -307,7 +307,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1015865676732120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.71, y: 5.05, z: 0}
+  m_LocalPosition: {x: 4.71, y: 4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4429136339700846}
@@ -360,7 +360,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927489021282066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.85, y: 5.05, z: 0}
+  m_LocalPosition: {x: 1.85, y: 4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4429136339700846}
@@ -373,7 +373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577024426493694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.01, y: 5.05, z: 0}
+  m_LocalPosition: {x: -1.01, y: 4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4429136339700846}
@@ -743,9 +743,10 @@ MonoBehaviour:
   - {fileID: 114504431453551214}
   - {fileID: 114291020116566626}
   - {fileID: 114321849032360852}
-  cost: 20
+  cost: 0
   playKeysMaxInterval: 0.9
-  maxTotalTime: 1000
+  maxTotalTime: 30
+  disappearWarningTime: 5
   onSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -798,6 +799,7 @@ MonoBehaviour:
   currentToPlayIndex: 0
   keyTimerCountingDown: 0
   destroyTimeAfterDone: 10
+  initializeOnStart: 1
 --- !u!212 &212254384335323740
 SpriteRenderer:
   m_ObjectHideFlags: 1

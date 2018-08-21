@@ -21251,6 +21251,11 @@ Prefab:
       propertyPath: onSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114850788030691414, guid: 089f05dcb16614e4da82aef6ba8c23d5,
+        type: 2}
+      propertyPath: maxTotalTime
+      value: 10000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089f05dcb16614e4da82aef6ba8c23d5, type: 2}
   m_IsPrefabAsset: 0

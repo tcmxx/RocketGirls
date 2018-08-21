@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269df0eb1d6e1c04baa621d39c78919b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource: 4
+  resource: 3
   sfx: {fileID: 8300000, guid: 460007236bb69c74fb0dd7634fbbf420, type: 3}
 --- !u!212 &212903955071628976
 SpriteRenderer:

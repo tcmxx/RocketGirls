@@ -1488,7 +1488,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185164445012020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.22, y: 0, z: 0}
+  m_LocalPosition: {x: -3.63, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4481535589480440}
@@ -1502,7 +1502,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388015048057094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.95, y: 0, z: 0}
+  m_LocalPosition: {x: -2.3600001, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4490702164689502}
@@ -1517,7 +1517,7 @@ Transform:
   m_GameObject: {fileID: 1903289298391434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.36, z: 0}
-  m_LocalScale: {x: 20, y: 0.155, z: 1}
+  m_LocalScale: {x: 47, y: 0.155, z: 1}
   m_Children: []
   m_Father: {fileID: 4956890394212186}
   m_RootOrder: 11
@@ -1664,7 +1664,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450598017195834}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.29, y: 0, z: 0}
+  m_LocalPosition: {x: 1.83, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4683770176737160}
@@ -1789,7 +1789,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886516180217822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.57, y: 0, z: 0}
+  m_LocalPosition: {x: -2.98, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4938790387135192}
@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1440293787868054}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.92, y: 0, z: 0}
+  m_LocalPosition: {x: 2.46, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4509345986515412}
@@ -2179,7 +2179,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1459082199179594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.16, y: 0, z: 0}
+  m_LocalPosition: {x: 3.7000003, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4774636848932310}
@@ -2260,7 +2260,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886728637572038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.28, y: 0, z: 0}
+  m_LocalPosition: {x: -1.69, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4357114883446072}
@@ -2347,7 +2347,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802526492901236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.54, y: 0, z: 0}
+  m_LocalPosition: {x: 3.08, y: 0, z: 0}
   m_LocalScale: {x: 0.55515, y: 0.55515, z: 0.55515}
   m_Children:
   - {fileID: 4234121530876498}
@@ -3103,7 +3103,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114053002732545874
 MonoBehaviour:
@@ -3116,7 +3116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3ec3c539509fd4ba611da9c39584eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceBurningRate: 1
+  resourceBurningRate: 1.5
   forwardSpeed: 4
   horizontalSpeed: 4
   shipVerticalFactor: 0.0224
@@ -3172,7 +3172,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114117233528153258
 MonoBehaviour:
@@ -3226,7 +3226,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114316560310625910
 MonoBehaviour:
@@ -3280,7 +3280,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114378527248150734
 MonoBehaviour:
@@ -3334,7 +3334,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114500004150847732
 MonoBehaviour:
@@ -3388,7 +3388,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114667607958459812
 MonoBehaviour:
@@ -3442,7 +3442,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114710738506244926
 MonoBehaviour:
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114745868563283178
 MonoBehaviour:
@@ -3550,7 +3550,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114883532884393700
 MonoBehaviour:
@@ -3604,7 +3604,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!114 &114945188585325300
 MonoBehaviour:
@@ -3658,7 +3658,7 @@ MonoBehaviour:
   dangerousColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   okColor: {r: 0.62268263, g: 0.94509804, b: 0.058823526, a: 1}
   goodColor: {r: 0.023534775, g: 1, b: 0, a: 1}
-  showAbilityThreshold: 0.85
+  showAbilityThreshold: 1.1
   status: 0
 --- !u!198 &198019570176132666
 ParticleSystem:

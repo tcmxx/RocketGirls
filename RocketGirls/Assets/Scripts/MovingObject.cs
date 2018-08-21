@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovingObject : MonoBehaviour {
 
+
     public enum SpeedMode
     {
         Relative,
@@ -12,7 +13,7 @@ public class MovingObject : MonoBehaviour {
 
     public SpeedMode speedMode = SpeedMode.Relative;
     public float speed = 2;
-
+    public float speedScale = 1;
     protected Rigidbody2D rBody;
     private void Awake()
     {
@@ -21,8 +22,8 @@ public class MovingObject : MonoBehaviour {
     private void Update()
     {
         if(speedMode == SpeedMode.Relative)
-            rBody.velocity = Vector3.down * (speed + SpaceShipGroup.Instance.forwardSpeed) * GameController.Instance.objectSpeedModifier;
+            rBody.velocity = Vector3.down * (speed + SpaceShipGroup.Instance.forwardSpeed) * GameController.Instance.objectSpeedModifier* speedScale;
         else
-            rBody.velocity = Vector3.down * (speed) * GameController.Instance.objectSpeedModifier;
+            rBody.velocity = Vector3.down * (speed) * GameController.Instance.objectSpeedModifier * speedScale;
     }
 }

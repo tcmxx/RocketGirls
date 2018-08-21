@@ -1340,9 +1340,10 @@ MonoBehaviour:
   - {fileID: 114504431453551214}
   - {fileID: 114291020116566626}
   - {fileID: 114321849032360852}
-  cost: 60
+  cost: 0
   playKeysMaxInterval: 0.9
-  maxTotalTime: 1000
+  maxTotalTime: 30
+  disappearWarningTime: 5
   onSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -1384,6 +1385,7 @@ MonoBehaviour:
   currentToPlayIndex: 0
   keyTimerCountingDown: 0
   destroyTimeAfterDone: 15
+  initializeOnStart: 1
 --- !u!114 &114861805450215390
 MonoBehaviour:
   m_ObjectHideFlags: 1

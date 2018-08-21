@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 114297134294457796}
   - component: {fileID: 114979821118427266}
   - component: {fileID: 114705084683949380}
+  - component: {fileID: 114574043207958914}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -269,10 +270,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 5
     m_AlignByGeometry: 0
@@ -280,7 +281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Goal
+  m_Text: 
 --- !u!114 &114296547754059132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,6 +357,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114574043207958914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1898849002809178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80638797b4d86bd47b90cef329c035ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableForEnglishUI: []
+  enableForEnglishUI: []
+  localizationTexts: []
 --- !u!114 &114591765822400922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,6 +433,7 @@ MonoBehaviour:
   gameSceneName: GameScene
   menuSceneName: MenuScene
   progressBarRef: {fileID: 114591765822400922}
+  progressText: {fileID: 114216145853568012}
 --- !u!114 &114761322932160632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -640,8 +656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: 226}
-  m_SizeDelta: {x: 34.1, y: 40.1}
+  m_AnchoredPosition: {x: -378, y: 219}
+  m_SizeDelta: {x: 185.29, y: 40.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224706591823638566
 RectTransform:
@@ -735,6 +751,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27.100037, y: 11.799927}
+  m_AnchoredPosition: {x: -27.100098, y: 11.799927}
   m_SizeDelta: {x: 54.2, y: -64.2}
   m_Pivot: {x: 0.5, y: 0.5}

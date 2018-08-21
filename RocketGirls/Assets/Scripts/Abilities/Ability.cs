@@ -9,6 +9,7 @@ public class Ability : MonoBehaviour {
     public float cost = 0.2f;
     public float playKeysMaxInterval = 0.5f;
     public float maxTotalTime = 5;
+    public float disappearWarningTime = 5;
     public UnityEvent onSuccess;
     
     [ReadOnly]
@@ -19,7 +20,7 @@ public class Ability : MonoBehaviour {
     protected float keyTimerCountingDown;
     protected float totalTimer = 0;
 
-    protected bool done = false;
+    public bool Done { get; private set; } = false;
     public float destroyTimeAfterDone;
     public bool initializeOnStart = true;
     protected Animator animator;
@@ -32,7 +33,7 @@ public class Ability : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        done = true;
+        Done = true;
         if (initializeOnStart)
         {
             
@@ -44,7 +45,7 @@ public class Ability : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (!done)
+        if (!Done)
         {
             totalTimer += Time.deltaTime;
             if (currentToPlayIndex != 0 && keyTimerCountingDown > 0)
@@ -55,9 +56,16 @@ public class Ability : MonoBehaviour {
             {
                 OnPlayKeyWrong();
             }
-
+            if(maxTotalTime - totalTimer > disappearWarningTime)
+            {
+                animator.SetBool("Warning", false);
+            }
+            else
+            {
+                animator.SetBool("Warning", true);
+            }
             CheckCurrentKey();
-            if(totalTimer >= maxTotalTime && !done)
+            if(totalTimer >= maxTotalTime && !Done)
             {
                 AbilityFailed();
             }
@@ -70,6 +78,10 @@ public class Ability : MonoBehaviour {
 
     }
 
+    public void ResetTimer()
+    {
+        totalTimer = 0;
+    }
 
     protected void CheckCurrentKey()
     {
@@ -109,7 +121,7 @@ public class Ability : MonoBehaviour {
 
     public void InitializeKeys()
     {
-        done = false;
+        Done = false;
         currentToPlayIndex = 0;
         foreach (var k in keysToPlay)
         {
@@ -126,7 +138,7 @@ public class Ability : MonoBehaviour {
 
     protected void AbilitySucceed()
     {
-        done = true;
+        Done = true;
         if(ParentPlayer)
             ParentPlayer.TakeDamage(cost,false);
         onSuccess.Invoke();
@@ -138,7 +150,7 @@ public class Ability : MonoBehaviour {
 
     public void AbilityFailed()
     {
-        done = true;
+        Done = true;
         Debug.Log("Ability " + gameObject.name + " failed~");
         animator.SetTrigger("Fail");
         Destroy(gameObject, destroyTimeAfterDone);
