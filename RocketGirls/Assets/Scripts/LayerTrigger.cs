@@ -34,6 +34,7 @@ public class LayerTrigger : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D col){
 
+        print("test");
         if (oneWay)
         {
             if(transform.InverseTransformPoint(col.transform.position).y < 0)

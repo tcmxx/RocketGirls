@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4854919909939778}
   - component: {fileID: 212903955071628976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 114258018693456698}
   - component: {fileID: 50306905576438384}
   - component: {fileID: 61560734937662712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -35,10 +35,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4253730797332994}
-  - component: {fileID: 61276444294633472}
   - component: {fileID: 114646143108900352}
-  - component: {fileID: 114780534358976494}
   - component: {fileID: 114591377609824408}
+  - component: {fileID: 114398383003149502}
+  - component: {fileID: 60994586303405334}
+  - component: {fileID: 50113632048423854}
   m_Layer: 0
   m_Name: EBikeEffect
   m_TagString: Untagged
@@ -53,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1999338878911174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2146487, y: 3.2829063, z: 0.091796875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.06, y: 1.29, z: 0}
+  m_LocalScale: {x: 1.2007, y: 1.2007, z: 1.2007}
   m_Children:
   - {fileID: 4297078356704828}
   m_Father: {fileID: 0}
@@ -73,8 +74,28 @@ Transform:
   m_Father: {fileID: 4253730797332994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61276444294633472
-BoxCollider2D:
+--- !u!50 &50113632048423854
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999338878911174}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &60994586303405334
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -85,19 +106,35 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24867749, y: -0.271991}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.150134, y: 3.098218}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.24639893, y: 1.831604}
+      - {x: -2.2754517, y: -0.21456909}
+      - {x: -3.3084958, y: -3.3296452}
+      - {x: 3.163499, y: -3.259036}
+      - {x: 2.0907593, y: -0.33779907}
+--- !u!114 &114398383003149502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999338878911174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16714c3cce901846af76e92c1ab8068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveMoveSpeed: 4
 --- !u!114 &114591377609824408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,8 +154,25 @@ MonoBehaviour:
     unityEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114780534358976494}
-          m_MethodName: Destroy
+        - m_Target: {fileID: 114398383003149502}
+          m_MethodName: AddObject
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: TriggerEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - eventType: 2
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114398383003149502}
+          m_MethodName: RemoveObject
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -143,20 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDelay: 7
---- !u!114 &114780534358976494
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1999338878911174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bc9a2d456b823e48bd637e50c803692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkAttachedRB: 1
-  checkParent: 0
-  destroyDelay: 0
 --- !u!212 &212207148634235270
 SpriteRenderer:
   m_ObjectHideFlags: 1

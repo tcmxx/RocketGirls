@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour {
 
     public Slider progressBarRef;
     public Text progressText;
+    public float showDistanceScale = 1.16f;
     private void Awake()
     {
         Instance = this;
@@ -30,7 +31,7 @@ public class GameUI : MonoBehaviour {
                 LocalizationText.GetText("Quit"), () => { TCUtils.TCSceneTransitionHelper.Instance.StartLoadingScene(menuSceneName); }, null
             );
         }
-        progressText.text = ((int)GameController.Instance.traveledDistance) + "/" + ((int)GameController.Instance.maxDistance);
+        progressText.text = ((int)(GameController.Instance.traveledDistance/ showDistanceScale)) + "/" + ((int)(GameController.Instance.maxDistance/ showDistanceScale));
     }
 
     public void ShowGameFail(float delay = 2.34f)

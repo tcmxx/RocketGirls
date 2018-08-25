@@ -647,7 +647,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: eee646e0-e09f-4d27-9ef7-c082b8cfc371
   projectName: RocketGirls
   organizationId: tcmxx
